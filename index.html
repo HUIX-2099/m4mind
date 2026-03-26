@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M4T MIND — Elite Media Production &amp; Storytelling Collective</title>
+  <meta name="description" content="Media 4 The Mind (M4T MIND) is a premier media production powerhouse in Liberia. We specialize in cinematic documentaries, professional podcasting, and immersive event virtualization.">
+  <meta name="keywords" content="M4T MIND, Media Production Liberia, Video Production Monrovia, Podcast Production Africa, Event Virtualization, Documentary Filmmaking, Digital Storytelling">
+  <meta property="og:title" content="M4T MIND — Elite Media Production">
+  <meta property="og:description" content="Telling your story, your way. Premium media production in Liberia.">
+  <meta property="og:image" content="https://m4tmind.com/images/m4m-logo-1.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Media 4 The Mind",
+      "alternateName": "M4T MIND",
+      "url": "https://m4tmind.com",
+      "logo": "https://m4tmind.com/images/m4m-logo-1.jpg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+231-881274124",
+        "contactType": "customer service",
+        "areaServed": "LR",
+        "availableLanguage": "en"
+      },
+      "sameAs": [
+        "https://facebook.com/m4tmind",
+        "https://instagram.com/m4tmind",
+        "https://youtube.com/m4tmind"
+      ]
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Outfit', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#fef2f2', 100: '#fee2e2', 200: '#fecaca',
+              300: '#fca5a5', 400: '#f87171', 500: '#ef4444',
+              600: '#dc2626', 700: '#b91c1c', 800: '#991b1b', 900: '#7f1d1d',
+            },
+            dark: {
+              50: '#1a1a1a', 100: '#151515', 200: '#111111',
+              300: '#0d0d0d', 400: '#0a0a0a', 500: '#070707',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Theme Init (Prevent FOUC) -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
+</head>
+
+<body class="font-sans antialiased overflow-x-hidden">
+
+  <!-- ==================== LOADING SCREEN ==================== -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+      <div class="loading-logo">
+        <img src="images/m4m-logo-1.jpg" alt="M4T MIND" class="loading-logo-img">
+        <div class="loading-logo-ring"></div>
+        <div class="loading-logo-ring ring-2"></div>
+      </div>
+      <div class="loading-wordmark">
+        <span class="loading-m4t">M4T</span><span class="loading-mind">MIND</span>
+      </div>
+      <div class="loading-bar-wrap">
+        <div class="loading-bar" id="loading-bar"></div>
+      </div>
+      <p class="loading-tagline">Telling Your Untold Stories</p>
+    </div>
+  </div>
+
+  <!-- ==================== SCROLL PROGRESS ==================== -->
+  <div id="scroll-progress" class="scroll-progress-bar"></div>
+
+  <!-- ==================== COOKIE POPUP ==================== -->
+  <div id="cookie-popup" class="cookie-popup">
+    <div class="cookie-inner">
+      <div class="cookie-header">
+        <div class="cookie-icon-wrap">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h.01M12 16h.01M16 12h.01"/></svg>
+        </div>
+        <div>
+          <h4 class="cookie-title">We Value Your Privacy</h4>
+          <p class="cookie-text">We use cookies &amp; Google Analytics to enhance your experience and improve our service. Your data is never sold.</p>
+        </div>
+      </div>
+      <div class="cookie-actions">
+        <button id="accept-cookies" class="cookie-btn-accept">Accept All</button>
+        <button id="manage-cookies" class="cookie-btn-manage">Manage</button>
+        <button id="decline-cookies" class="cookie-btn-decline">Decline</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TOP BAR ==================== -->
+  <div class="topbar hidden md:block">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <span class="status-dot"></span>
+        <span class="topbar-status">LIVE PRODUCTION</span>
+        <span class="topbar-divider">|</span>
+        <span class="topbar-loc">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Monrovia, Liberia
+        </span>
+      </div>
+      <div class="topbar-right">
+        <a href="tel:+231881274124" class="topbar-link">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16z"/></svg>
+          +231 881 274 124
+        </a>
+        <a href="mailto:info@m4tmind.com" class="topbar-link">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+          info@m4tmind.com
+        </a>
+        <div class="topbar-socials">
+          <a href="https://facebook.com/m4tmind" target="_blank" aria-label="Facebook" class="topbar-social">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://instagram.com/m4tmind" target="_blank" aria-label="Instagram" class="topbar-social">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://youtube.com/m4tmind" target="_blank" aria-label="YouTube" class="topbar-social">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.57 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon fill="white" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav id="navbar" class="navbar">
+    <div class="navbar-inner">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo-link">
+        <div class="nav-logo-img-wrap">
+          <img src="images/m4m-logo-1.jpg" alt="M4T MIND Logo" class="nav-logo-img">
+        </div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-m4t">M4T</span><span class="nav-logo-mind">MIND</span>
+          <span class="nav-logo-tag">Media 4 The Mind</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="nav-desktop">
+        <a href="index.html" class="nav-link active-link">Home</a>
+
+        <!-- Services Dropdown -->
+        <div class="nav-dropdown-wrap">
+          <a href="services.html" class="nav-link nav-dropdown-trigger">
+            Services
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-inner">
+              <a href="services.html#event-virtualization" class="nav-dropdown-item">
+                <div class="nav-dd-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <div>
+                  <span class="nav-dd-title">Event Virtualization</span>
+                  <span class="nav-dd-desc">Transform live events globally</span>
+                </div>
+              </a>
+              <a href="services.html#podcast" class="nav-dropdown-item">
+                <div class="nav-dd-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                </div>
+                <div>
+                  <span class="nav-dd-title">Podcast Production</span>
+                  <span class="nav-dd-desc">Professional audio storytelling</span>
+                </div>
+              </a>
+              <a href="services.html#documentaries" class="nav-dropdown-item">
+                <div class="nav-dd-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 2h10l5 5v15H2V2z"/><path d="M7 2v5h5"/><circle cx="12" cy="15" r="3"/></svg>
+                </div>
+                <div>
+                  <span class="nav-dd-title">Documentaries</span>
+                  <span class="nav-dd-desc">Cinematic narrative filmmaking</span>
+                </div>
+              </a>
+              <a href="services.html#zoom" class="nav-dropdown-item">
+                <div class="nav-dd-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                </div>
+                <div>
+                  <span class="nav-dd-title">Zoom Planning</span>
+                  <span class="nav-dd-desc">Virtual meeting management</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Dropdown -->
+        <div class="nav-dropdown-wrap">
+          <a href="about.html" class="nav-link nav-dropdown-trigger">
+            About
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-inner">
+              <a href="about.html#mission" class="nav-dropdown-item">
+                <div class="nav-dd-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                </div>
+                <div>
+                  <span class="nav-dd-title">Our Mission</span>
+                  <span class="nav-dd-desc">What drives us forward</span>
+                </div>
+              </a>
+              <a href="about.html#team" class="nav-dropdown-item">
+                <div class="nav-dd-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div>
+                  <span class="nav-dd-title">Our Team</span>
+                  <span class="nav-dd-desc">Meet the creatives</span>
+                </div>
+              </a>
+              <a href="about.html#values" class="nav-dropdown-item">
+                <div class="nav-dd-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div>
+                  <span class="nav-dd-title">Our Values</span>
+                  <span class="nav-dd-desc">Wisdom, leadership, integrity</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+          <svg id="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg id="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+
+        <a href="contact.html" class="nav-cta-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 2 4.18 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6 6z"/></svg>
+          Get In Touch
+        </a>
+      </div>
+
+      <!-- Hamburger -->
+      <button id="hamburger" class="hamburger-btn" aria-label="Toggle menu">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== MOBILE MENU ==================== -->
+  <div id="mobile-menu" class="mobile-menu-overlay">
+    <button id="mobile-close" class="mobile-close-btn" aria-label="Close menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="mobile-menu-content">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="portfolio.html" class="mobile-nav-link">Portfolio</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="contact.html" class="mobile-nav-cta">Get In Touch</a>
+    </div>
+    <div class="mobile-menu-footer">
+      <span>info@m4tmind.com</span>
+      <span>+231 881 274 124</span>
+    </div>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section id="hero" class="hero-section noise-overlay">
+    <!-- BG Image -->
+    <div class="hero-bg" style="background-image: url('images/hero-bg.png');"></div>
+    <!-- Mesh Gradient Overlay -->
+    <div class="mesh-gradient absolute inset-0 opacity-50"></div>
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#0a0a0a]"></div>
+    <!-- Decorative Blobs -->
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+
+    <!-- SVG Grid Lines -->
+    <svg class="hero-grid-svg" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+      <defs>
+        <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+          <path d="M 80 0 L 0 0 0 80" fill="none" stroke="rgba(220,38,38,0.06)" stroke-width="1"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)"/>
+    </svg>
+
+    <div class="hero-content">
+      <!-- Badge -->
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span>Liberia's Premier Media House · Est. 2020</span>
+      </div>
+
+      <h1 class="hero-heading">
+        <span class="hero-line-1">TELLING YOUR</span>
+        <span class="hero-line-2">UNTOLD <span class="hero-highlight">STORIES</span></span>
+      </h1>
+
+      <p class="hero-subtext">
+        M4T MIND is a premium production house specializing in cinematic documentaries,
+        virtual event architecture, and high-fidelity podcasting across Africa and beyond.
+      </p>
+
+      <div class="hero-actions">
+        <a href="contact.html" class="hero-btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 2 4.18 A2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6 6z"/></svg>
+          Start Your Project
+        </a>
+        <a href="portfolio.html" class="hero-btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          View Our Work
+        </a>
+      </div>
+
+      <!-- Stats Strip -->
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">50+</span>
+          <span class="hero-stat-label">Projects</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">10+</span>
+          <span class="hero-stat-label">Clients</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">8+</span>
+          <span class="hero-stat-label">Services</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">5+</span>
+          <span class="hero-stat-label">Years</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span class="scroll-label">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES PREVIEW ==================== -->
+  <section id="services" class="section-services">
+    <!-- Geometric SVG Decor -->
+    <svg class="section-decor-svg left-decor" viewBox="0 0 200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="100" y1="0" x2="100" y2="600" stroke="rgba(220,38,38,0.08)" stroke-width="1" stroke-dasharray="8 8"/>
+      <circle cx="100" cy="300" r="80" stroke="rgba(220,38,38,0.05)" stroke-width="1" fill="none"/>
+    </svg>
+
+    <div class="section-container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          What We Do
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2 class="section-title">Our <span class="text-gradient">Services</span></h2>
+        <p class="section-subtitle">From concept to final cut — we handle every frame of your story.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <a href="services.html#event-virtualization" class="service-card reveal" style="--delay: 0.1s">
+          <div class="service-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <span class="service-card-num">01</span>
+          <h3 class="service-card-title">Event Virtualization</h3>
+          <p class="service-card-desc">Transform your live events into immersive global virtual experiences with cinematic production quality.</p>
+          <div class="service-card-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+
+        <!-- Service Card 2 -->
+        <a href="services.html#podcast" class="service-card reveal" style="--delay: 0.2s">
+          <div class="service-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          </div>
+          <span class="service-card-num">02</span>
+          <h3 class="service-card-title">Podcast Production</h3>
+          <p class="service-card-desc">High-fidelity audio and video podcast production from concept development to launch and distribution.</p>
+          <div class="service-card-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+
+        <!-- Service Card 3 -->
+        <a href="services.html#documentaries" class="service-card reveal" style="--delay: 0.3s">
+          <div class="service-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+          <span class="service-card-num">03</span>
+          <h3 class="service-card-title">Documentaries</h3>
+          <p class="service-card-desc">Cinematic narratives and documentary films that capture the depth and essence of the human experience.</p>
+          <div class="service-card-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+
+        <!-- Service Card 4 -->
+        <a href="services.html#zoom" class="service-card reveal" style="--delay: 0.4s">
+          <div class="service-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <span class="service-card-num">04</span>
+          <h3 class="service-card-title">Zoom Planning</h3>
+          <p class="service-card-desc">Seamless end-to-end virtual meeting management, coordination, and professional facilitation.</p>
+          <div class="service-card-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </div>
+        </a>
+
+        <!-- Service Card 5 - Wide -->
+        <a href="services.html#branding" class="service-card service-card-wide reveal" style="--delay: 0.5s">
+          <div class="service-card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <span class="service-card-num">05</span>
+          <h3 class="service-card-title">Branding &amp; Creative Direction</h3>
+          <p class="service-card-desc">Full-spectrum creative direction, brand identity, motion graphics, and media strategy consulting for organizations that want to stand out.</p>
+          <div class="service-card-arrow">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 19"/></svg>
+          </div>
+        </a>
+      </div>
+
+      <div class="section-cta-row reveal">
+        <a href="services.html" class="outline-btn">
+          View All Services
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT STRIP ==================== -->
+  <section id="about" class="section-about">
+    <div class="about-split-bg"></div>
+    <div class="section-container">
+      <div class="about-grid">
+        <!-- Left Visual -->
+        <div class="about-visual reveal-left">
+          <div class="about-img-frame">
+            <img src="images/m4m-logo-1.jpg" alt="M4T MIND Studio" class="about-img">
+            <div class="about-img-badge">
+              <span class="about-badge-num">5+</span>
+              <span class="about-badge-text">Years of Excellence</span>
+            </div>
+          </div>
+          <!-- Floating SVG accent -->
+          <svg class="about-accent-svg" viewBox="0 0 200 200" fill="none">
+            <circle cx="100" cy="100" r="90" stroke="rgba(220,38,38,0.15)" stroke-width="1" stroke-dasharray="12 8"/>
+            <circle cx="100" cy="100" r="60" stroke="rgba(220,38,38,0.08)" stroke-width="1"/>
+          </svg>
+        </div>
+        <!-- Right Content -->
+        <div class="about-content reveal-right">
+          <div class="section-eyebrow" style="justify-content: flex-start;">
+            <span class="eyebrow-line" style="width: 30px;"></span>
+            Our Story
+          </div>
+          <h2 class="section-title" style="text-align:left; margin-bottom: 1rem;">About <span class="text-gradient">M4T MIND</span></h2>
+          <p class="about-text">
+            We bring our experience and enthusiasm to have the world see what you do in excellence. 
+            We serve our clients through <strong>wisdom, leadership, and integrity</strong> with their requirements 
+            being the driving force of our organization.
+          </p>
+          <p class="about-text">
+            Serving Liberia and beyond, we capture our clients' stories to share with your audience. 
+            Utilizing state-of-the-art technology to immerse your clients and stakeholders in your engagement.
+          </p>
+          <div class="about-values">
+            <div class="about-value">
+              <div class="about-value-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <span>Wisdom</span>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <span>Leadership</span>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <span>Integrity</span>
+            </div>
+            <div class="about-value">
+              <div class="about-value-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <span>Excellence</span>
+            </div>
+          </div>
+          <a href="about.html" class="outline-btn" style="margin-top: 2rem; display: inline-flex;">
+            Learn More About Us
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CLIENTS MARQUEE ==================== -->
+  <section id="clients" class="section-clients">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>
+          Trusted By
+          <span class="eyebrow-line"></span>
+        </div>
+        <h2 class="section-title">Our <span class="text-gradient">Partners</span></h2>
+        <p class="section-subtitle">Proud to serve leading organizations across Africa and beyond.</p>
+      </div>
+
+      <!-- Marquee Row -->
+      <div class="marquee-container reveal">
+        <div class="marquee-fade-left"></div>
+        <div class="marquee-fade-right"></div>
+        <div class="marquee-track">
+          <div class="marquee-row">
+            <div class="client-logo-card"><img src="images/M4M_Media_Kit__2___1_e_-_Copy-removebg-preview.png" alt="Client"></div>
+            <div class="client-logo-card"><img src="images/WhatsApp_Image_2023-02-17_at_13.26.51-removebg-preview.png" alt="Client"></div>
+            <div class="client-logo-card"><img src="images/WhatsApp_Image_2023-02-17_at_13.26.52-removebg-preview.png" alt="Client"></div>
+            <div class="client-logo-card"><img src="images/imageedit_1_4334243055-removebg-preview.png" alt="Client"></div>
+            <div class="client-logo-card"><img src="images/imageedit_1_6198083852-removebg-preview.png" alt="Client"></div>
+            <div class="client-logo-card"><img src="images/imageedit_1_9636512890.png" alt="Client"></div>
+            <div class="client-logo-card"><img src="images/imageedit_1_6472033316.png" alt="Client"></div>
+            <div class="client-logo-card"><img src="images/imageedit_4_9455186299.png" alt="Client"></div>
+            <!-- Duplicate -->
+            <div class="client-logo-card"><img src="images/M4M_Media_Kit__2___1_e_-_Copy-removebg-preview.png" alt="Client"></div>
+            <div class="client-logo-card"><img src="images/WhatsApp_Image_2023-02-17_at_13.26.51-removebg-preview.png" alt="Client"></div>
+            <div class="client-logo-card"><img src="images/WhatsApp_Image_2023-02-17_at_13.26.52-removebg-preview.png" alt="Client"></div>
+            <div class="client-logo-card"><img src="images/imageedit_1_4334243055-removebg-preview.png" alt="Client"></div>
+            <div class="client-logo-card"><img src="images/imageedit_1_6198083852-removebg-preview.png" alt="Client"></div>
+            <div class="client-logo-card"><img src="images/imageedit_1_9636512890.png" alt="Client"></div>
+            <div class="client-logo-card"><img src="images/imageedit_1_6472033316.png" alt="Client"></div>
+            <div class="client-logo-card"><img src="images/imageedit_4_9455186299.png" alt="Client"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CTA BAND ==================== -->
+  <section class="section-cta-band">
+    <div class="cta-band-bg" style="background-image: url('images/story-bg.png');"></div>
+    <div class="cta-band-overlay"></div>
+    <!-- SVG Lines -->
+    <svg class="cta-band-svg" viewBox="0 0 1440 200" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0 100 Q360 0 720 100 Q1080 200 1440 100" stroke="rgba(220,38,38,0.15)" stroke-width="2" fill="none"/>
+      <path d="M0 120 Q360 20 720 120 Q1080 220 1440 120" stroke="rgba(220,38,38,0.08)" stroke-width="1" fill="none"/>
+    </svg>
+    <div class="cta-band-content reveal-scale">
+      <div class="section-eyebrow" style="justify-content:center; color: rgba(255,255,255,0.7);">
+        <span class="eyebrow-line" style="background:rgba(255,255,255,0.3)"></span>
+        Your Story Matters
+        <span class="eyebrow-line" style="background:rgba(255,255,255,0.3)"></span>
+      </div>
+      <h2 class="cta-band-title">It Is <span class="text-gradient">Your Story</span></h2>
+      <p class="cta-band-text">We capture our clients' stories to share with your audience. Utilizing state-of-the-art technology to immerse your clients and stakeholders in your engagement.</p>
+      <div class="cta-band-actions">
+        <a href="contact.html" class="hero-btn-primary">
+          Start Your Project Today
+        </a>
+        <a href="portfolio.html" class="hero-btn-secondary">
+          See Our Work
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT TEASER ==================== -->
+  <section id="contact" class="section-contact-teaser">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">
+          <span class="eyebrow-line"></span>Get In Touch<span class="eyebrow-line"></span>
+        </div>
+        <h2 class="section-title">Keep In <span class="text-gradient">Touch</span></h2>
+        <p class="section-subtitle">Ready to tell your story? Reach out and let's create something extraordinary.</p>
+      </div>
+
+      <div class="contact-teaser-grid">
+        <div class="contact-info-card reveal-left">
+          <div class="contact-info-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4>Our Office</h4>
+            <p>DB Building, Newport Street<br>Monrovia, Liberia</p>
+          </div>
+        </div>
+        <div class="contact-info-card reveal-left" style="animation-delay: 0.15s">
+          <div class="contact-info-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 2 4.18 2 2 0 0 1 3.6 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.59a16 16 0 0 0 6 6z"/></svg>
+          </div>
+          <div>
+            <h4>Call Us</h4>
+            <p><a href="tel:+231881274124">(+231) 881 274 124</a><br><a href="tel:+19194366041">(+1) 919 436 6041</a></p>
+          </div>
+        </div>
+        <div class="contact-info-card reveal-left" style="animation-delay: 0.3s">
+          <div class="contact-info-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+          </div>
+          <div>
+            <h4>Email Us</h4>
+            <p><a href="mailto:info@m4tmind.com">info@m4tmind.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-cta-row reveal" style="margin-top: 3rem;">
+        <a href="contact.html" class="hero-btn-primary">
+          Send Us a Message
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <!-- Top -->
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="images/m4m-logo-1.jpg" alt="M4T MIND" class="footer-logo">
+          <div>
+            <div class="footer-brandname"><span>M4T</span><span class="text-brand-600">MIND</span></div>
+            <p class="footer-tagline">Media 4 The Mind<br>Telling Your Untold Stories</p>
+          </div>
+        </div>
+        <div class="footer-links-grid">
+          <div class="footer-links-col">
+            <h5>Navigate</h5>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-links-col">
+            <h5>Services</h5>
+            <a href="services.html#event-virtualization">Event Virtualization</a>
+            <a href="services.html#podcast">Podcast Production</a>
+            <a href="services.html#documentaries">Documentaries</a>
+            <a href="services.html#zoom">Zoom Planning</a>
+            <a href="services.html#branding">Branding</a>
+          </div>
+          <div class="footer-links-col">
+            <h5>Connect</h5>
+            <a href="https://facebook.com/m4tmind" target="_blank">Facebook</a>
+            <a href="https://instagram.com/m4tmind" target="_blank">Instagram</a>
+            <a href="https://youtube.com/m4tmind" target="_blank">YouTube</a>
+            <a href="mailto:info@m4tmind.com">Email Us</a>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Media 4 The Mind. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <span>·</span>
+          <a href="terms.html">Terms of Service</a>
+          <span>·</span>
+          <a href="sitemap.html">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING CHAT BUTTON ==================== -->
+  <button id="chat-fab" class="chat-fab" aria-label="Open chat">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+    <span class="chat-fab-badge"></span>
+    <span class="chat-fab-pulse"></span>
+  </button>
+
+  <!-- ==================== CHAT MODAL ==================== -->
+  <div id="chat-modal" class="chat-modal">
+    <div class="chat-modal-inner">
+      <div class="chat-modal-header">
+        <div class="chat-header-left">
+          <div class="chat-avatar">
+            <img src="images/m4m-logo-1.jpg" alt="M4T AI">
+            <span class="chat-online-dot"></span>
+          </div>
+          <div>
+            <h4>M4T Assistant</h4>
+            <span class="chat-status">Online · Usually replies instantly</span>
+          </div>
+        </div>
+        <button id="chat-close" class="chat-close-btn" aria-label="Close chat">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="chat-msg chat-msg-bot">
+          <div class="chat-bubble">
+            👋 Hello! I'm the M4T MIND assistant. How can I help you tell your story today?
+          </div>
+          <span class="chat-time">Just now</span>
+        </div>
+        <div class="chat-suggestions">
+          <button class="chat-suggestion-btn" data-msg="Tell me about your documentary services">📽️ Documentary Services</button>
+          <button class="chat-suggestion-btn" data-msg="I need podcast production help">🎙️ Podcast Production</button>
+          <button class="chat-suggestion-btn" data-msg="How do I get started with M4T MIND?">🚀 Get Started</button>
+          <button class="chat-suggestion-btn" data-msg="What are your pricing options?">💰 Pricing Info</button>
+        </div>
+      </div>
+      <div class="chat-input-row">
+        <input type="text" id="chat-input" placeholder="Type your message..." class="chat-input" autocomplete="off">
+        <button id="chat-send" class="chat-send-btn" aria-label="Send message">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== BACK TO TOP ==================== -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+  <script>if (window.lucide) lucide.createIcons();</script>
+</body>
+</html>
