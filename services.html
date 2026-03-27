@@ -3,34 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services — M4T MIND | Media Production Liberia</title>
-  <meta name="description" content="Explore M4T MIND's full range of services: Event Virtualization, Podcast Production, Documentary Filmmaking, Zoom Planning, and Branding.">
+  <title>Services — M4M | Media Production Liberia</title>
+  <meta name="description" content="Explore M4M's full range of services: Event Virtualization, Podcast Production, Documentary Filmmaking, Zoom Planning, and Branding.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://m4tmind.com/services.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="M4M — Media For The Mind">
+  <meta property="og:title" content="Services — M4M | Media Production Services">
+  <meta property="og:description" content="Event virtualization, podcast production, documentaries, branding, photography and more.">
+  <meta property="og:url" content="https://m4tmind.com/services.html">
+  <meta property="og:image" content="https://m4tmind.com/images/newlogo.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Services — M4M | Media Production Services">
+  <meta name="twitter:description" content="Event virtualization, podcast production, documentaries, branding, photography and more.">
+  <meta name="twitter:image" content="https://m4tmind.com/images/newlogo.jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','sans-serif'],display:['Outfit','sans-serif']},colors:{brand:{500:'#ef4444',600:'#dc2626',700:'#b91c1c'}}}}}</script>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
   <script>(function(){const t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
-  <style>
-    .service-detail-card{padding:3rem;border-radius:20px;background:var(--card-bg);border:1px solid var(--border-color);display:grid;gap:2.5rem;margin-bottom:2rem;scroll-margin-top:120px;transition:border-color .3s;}
-    .service-detail-card:hover{border-color:rgba(220,38,38,0.25);}
-    @media(min-width:768px){.service-detail-card{grid-template-columns:80px 1fr;}}
-    .service-detail-icon{width:80px;height:80px;border-radius:18px;background:rgba(220,38,38,0.1);border:1px solid rgba(220,38,38,0.2);display:flex;align-items:center;justify-content:center;color:var(--brand);flex-shrink:0;}
-    .service-detail-title{font-family:'Outfit',sans-serif;font-weight:800;font-size:1.6rem;margin-bottom:.5rem;}
-    .service-detail-desc{font-size:.95rem;color:var(--text-secondary);line-height:1.75;margin-bottom:1.25rem;}
-    .service-feature-list{display:flex;flex-direction:column;gap:.5rem;}
-    .service-feature-item{display:flex;align-items:center;gap:.6rem;font-size:.85rem;color:var(--text-secondary);}
-    .service-feature-item svg{color:var(--brand);flex-shrink:0;}
-    .service-process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:2rem;}
-    .service-step{padding:1.25rem;border-radius:12px;background:rgba(220,38,38,0.05);border:1px solid rgba(220,38,38,0.1);}
-    .service-step-num{font-family:'Outfit',sans-serif;font-weight:900;font-size:1.5rem;color:rgba(220,38,38,0.3);line-height:1;}
-    .service-step-title{font-weight:600;font-size:.85rem;margin-top:.25rem;}
-    .service-step-desc{font-size:.75rem;color:var(--text-muted);margin-top:.25rem;line-height:1.5;}
-  </style>
 </head>
 <body class="font-sans antialiased">
-  <div id="loading-screen" class="loading-screen"><div class="loading-content"><div class="loading-logo"><img src="images/m4m-logo-1.jpg" alt="M4T MIND" class="loading-logo-img"><div class="loading-logo-ring"></div><div class="loading-logo-ring ring-2"></div></div><div class="loading-wordmark"><span class="loading-m4t">M4T</span><span class="loading-mind">MIND</span></div><div class="loading-bar-wrap"><div class="loading-bar" id="loading-bar"></div></div></div></div>
+  <div id="loading-screen" class="loading-screen"><div class="loading-content"><div class="loading-logo"><img src="images/newlogo.jpeg" alt="M4M" class="loading-logo-img"><div class="loading-logo-ring"></div><div class="loading-logo-ring ring-2"></div></div><div class="loading-wordmark"><span class="loading-m4t">MEDIA FOR THE</span><span class="loading-mind">MIND</span></div><div class="loading-tagline" style="font-size:.85rem;color:var(--text-muted);margin-top:.5rem;letter-spacing:.04em;">Creativity, Conversation, and Influence</div><div class="loading-bar-wrap"><div class="loading-bar" id="loading-bar"></div></div></div></div>
   <div id="scroll-progress" class="scroll-progress-bar"></div>
   <div id="cookie-popup" class="cookie-popup"><div class="cookie-inner"><div class="cookie-header"><div class="cookie-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h.01M12 16h.01M16 12h.01"/></svg></div><div><h4 class="cookie-title">We Value Your Privacy</h4><p class="cookie-text">We use cookies &amp; Google Analytics to enhance your experience.</p></div></div><div class="cookie-actions"><button id="accept-cookies" class="cookie-btn-accept">Accept All</button><button id="manage-cookies" class="cookie-btn-manage">Manage</button><button id="decline-cookies" class="cookie-btn-decline">Decline</button></div></div></div>
 
@@ -38,12 +32,13 @@
 
   <nav id="navbar" class="navbar">
     <div class="navbar-inner">
-      <a href="index.html" class="nav-logo-link"><div class="nav-logo-img-wrap"><img src="images/m4m-logo-1.jpg" alt="M4T MIND Logo" class="nav-logo-img"></div><div class="nav-logo-text"><span class="nav-logo-m4t">M4T</span><span class="nav-logo-mind">MIND</span><span class="nav-logo-tag">Media 4 The Mind</span></div></a>
+      <a href="index.html" class="nav-logo-link"><div class="nav-logo-img-wrap"><img src="images/newlogo.jpeg" alt="M4M Logo" class="nav-logo-img"></div><div class="nav-logo-text"><span class="nav-logo-m4t">MEDIA FOR THE</span><span class="nav-logo-mind">MIND</span><span class="nav-logo-tag">Media For The Mind</span></div></a>
       <div class="nav-desktop">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="services.html" class="nav-link active-link">Services</a>
         <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active-link">Services</a>
         <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="book.html" class="nav-link">Book</a>
         <a href="contact.html" class="nav-link">Contact</a>
         <button id="theme-toggle" class="theme-toggle-btn"><svg id="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg><svg id="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
         <a href="contact.html" class="nav-cta-btn">Get In Touch</a>
@@ -52,7 +47,7 @@
     </div>
   </nav>
 
-  <div id="mobile-menu" class="mobile-menu-overlay"><button id="mobile-close" class="mobile-close-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="mobile-menu-content"><a href="index.html" class="mobile-nav-link">Home</a><a href="about.html" class="mobile-nav-link">About</a><a href="services.html" class="mobile-nav-link">Services</a><a href="portfolio.html" class="mobile-nav-link">Portfolio</a><a href="contact.html" class="mobile-nav-link">Contact</a><a href="contact.html" class="mobile-nav-cta">Get In Touch</a></div><div class="mobile-menu-footer"><span>info@m4tmind.com</span></div></div>
+  <div id="mobile-menu" class="mobile-menu-overlay"><button id="mobile-close" class="mobile-close-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="mobile-menu-content"><a href="index.html" class="mobile-nav-link">Home</a><a href="about.html" class="mobile-nav-link">About</a><a href="services.html" class="mobile-nav-link">Services</a><a href="portfolio.html" class="mobile-nav-link">Portfolio</a><a href="book.html" class="mobile-nav-link">Book</a><a href="contact.html" class="mobile-nav-link">Contact</a><a href="book.html" class="mobile-nav-cta">Book a Session</a></div><div class="mobile-menu-footer"><span>info@m4tmind.com</span></div></div>
 
   <!-- Page Hero -->
   <div class="page-hero noise-overlay">
@@ -69,7 +64,7 @@
   <!-- Quick Nav -->
   <div style="background:var(--bg-secondary);border-bottom:1px solid var(--border-color);position:sticky;top:70px;z-index:30;">
     <div class="section-container" style="padding-top:.75rem;padding-bottom:.75rem;">
-      <div style="display:flex;gap:1.5rem;overflow-x:auto;scrollbar-width:none;">
+      <div style="display:flex;gap:1.5rem;overflow-x:auto;scrollbar-width:none;justify-content:center;">
         <a href="#event-virtualization" class="outline-btn" style="white-space:nowrap;padding:.4rem 1rem;font-size:.7rem;">Event Virtualization</a>
         <a href="#podcast" class="outline-btn" style="white-space:nowrap;padding:.4rem 1rem;font-size:.7rem;">Podcast Production</a>
         <a href="#documentaries" class="outline-btn" style="white-space:nowrap;padding:.4rem 1rem;font-size:.7rem;">Documentaries</a>
@@ -104,7 +99,7 @@
             <div class="service-step"><div class="service-step-num">03</div><div class="service-step-title">Live Day</div><div class="service-step-desc">Full technical team on-site for seamless broadcast</div></div>
             <div class="service-step"><div class="service-step-num">04</div><div class="service-step-title">Delivery</div><div class="service-step-desc">Post-event recordings and highlight content</div></div>
           </div>
-          <div style="margin-top:1.5rem;"><a href="contact.html" class="hero-btn-primary" style="display:inline-flex;">Book This Service</a></div>
+          <div style="margin-top:1.5rem;"><button onclick="openBookingModal()" class="hero-btn-primary" style="display:inline-flex;border:none;cursor:pointer;">Book This Service</button></div>
         </div>
       </div>
 
@@ -122,7 +117,7 @@
             <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Distribution to Spotify, Apple Podcasts & more</div>
             <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Branded intro/outro music & artwork</div>
           </div>
-          <div style="margin-top:1.5rem;"><a href="contact.html" class="hero-btn-primary" style="display:inline-flex;">Start Your Podcast</a></div>
+          <div style="margin-top:1.5rem;"><button onclick="openBookingModal()" class="hero-btn-primary" style="display:inline-flex;border:none;cursor:pointer;">Start Your Podcast</button></div>
         </div>
       </div>
 
@@ -132,7 +127,7 @@
         <div>
           <span class="service-card-num">03</span>
           <h2 class="service-detail-title">Documentaries</h2>
-          <p class="service-detail-desc">Cinematic documentary filmmaking that captures the depth, humanity, and impact of your organization's work. We tell real stories with the visual power of feature film production.</p>
+          <p class="service-detail-desc">Cinematic documentary filmmaking that captures the depth, humanity, and impact of your organization's work. We tell stories with the visual power of feature film production.</p>
           <div class="service-feature-list">
             <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Script development & story research</div>
             <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>4K cinematography with drone coverage</div>
@@ -140,7 +135,7 @@
             <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Color grading & professional editing</div>
             <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Custom music scoring & sound design</div>
           </div>
-          <div style="margin-top:1.5rem;"><a href="contact.html" class="hero-btn-primary" style="display:inline-flex;">Plan Your Documentary</a></div>
+          <div style="margin-top:1.5rem;"><button onclick="openBookingModal()" class="hero-btn-primary" style="display:inline-flex;border:none;cursor:pointer;">Plan Your Documentary</button></div>
         </div>
       </div>
 
@@ -157,7 +152,7 @@
             <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Breakout room management</div>
             <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Recording, transcription & highlights</div>
           </div>
-          <div style="margin-top:1.5rem;"><a href="contact.html" class="hero-btn-primary" style="display:inline-flex;">Book Zoom Support</a></div>
+          <div style="margin-top:1.5rem;"><button onclick="openBookingModal()" class="hero-btn-primary" style="display:inline-flex;border:none;cursor:pointer;">Book Zoom Support</button></div>
         </div>
       </div>
 
@@ -173,8 +168,9 @@
             <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Motion graphics & animated titles</div>
             <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Social media content strategy</div>
             <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Media kit & brand guidelines document</div>
+            <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Website Design and Development</div>
           </div>
-          <div style="margin-top:1.5rem;"><a href="contact.html" class="hero-btn-primary" style="display:inline-flex;">Build Your Brand</a></div>
+          <div style="margin-top:1.5rem;"><button onclick="openBookingModal()" class="hero-btn-primary" style="display:inline-flex;border:none;cursor:pointer;">Build Your Brand</button></div>
         </div>
       </div>
 
@@ -190,8 +186,9 @@
             <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Corporate headshots & team portraits</div>
             <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Photo editing & color correction</div>
             <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Social media optimized deliverables</div>
+            <div class="service-feature-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Product Photography</div>
           </div>
-          <div style="margin-top:1.5rem;"><a href="contact.html" class="hero-btn-primary" style="display:inline-flex;">Book a Shoot</a></div>
+          <div style="margin-top:1.5rem;"><button onclick="openBookingModal()" class="hero-btn-primary" style="display:inline-flex;border:none;cursor:pointer;">Book a Shoot</button></div>
         </div>
       </div>
 
@@ -200,21 +197,48 @@
 
   <!-- CTA -->
   <section class="section-cta-band">
-    <div class="cta-band-bg" style="background-image:url('images/story-bg.png');"></div>
+    <div class="cta-band-bg" style="background-image:url('/images/story-bg.png');"></div>
     <div class="cta-band-overlay"></div>
     <div class="cta-band-content reveal-scale">
       <div class="section-eyebrow" style="justify-content:center;color:rgba(255,255,255,.7);"><span class="eyebrow-line" style="background:rgba(255,255,255,.3)"></span>Ready to Start?<span class="eyebrow-line" style="background:rgba(255,255,255,.3)"></span></div>
       <h2 class="cta-band-title">Let's Work <span class="text-gradient">Together</span></h2>
       <p class="cta-band-text">Not sure which service is right for you? Contact us and we'll help you find the perfect solution for your needs and budget.</p>
-      <div class="cta-band-actions"><a href="contact.html" class="hero-btn-primary">Get a Free Consultation</a><a href="portfolio.html" class="hero-btn-secondary">See Our Work</a></div>
+      <div class="cta-band-actions"><button onclick="openBookingModal()" class="hero-btn-primary" style="border:none;cursor:pointer;">Get a Free Consultation</button><a href="portfolio.html" class="hero-btn-secondary">See Our Work</a></div>
     </div>
   </section>
 
-  <footer class="site-footer"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><img src="images/m4m-logo-1.jpg" alt="M4T MIND" class="footer-logo"><div><div class="footer-brandname"><span>M4T</span><span class="text-brand-600">MIND</span></div><p class="footer-tagline">Media 4 The Mind<br>Telling Your Untold Stories</p></div></div><div class="footer-links-grid"><div class="footer-links-col"><h5>Navigate</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a></div><div class="footer-links-col"><h5>Services</h5><a href="#event-virtualization">Event Virtualization</a><a href="#podcast">Podcast Production</a><a href="#documentaries">Documentaries</a><a href="#zoom">Zoom Planning</a></div><div class="footer-links-col"><h5>Connect</h5><a href="https://facebook.com/m4tmind" target="_blank">Facebook</a><a href="https://instagram.com/m4tmind" target="_blank">Instagram</a><a href="mailto:info@m4tmind.com">Email Us</a></div></div></div><div class="footer-bottom"><p>&copy; <span id="year"></span> Media 4 The Mind. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><span>·</span><a href="#">Terms</a></div></div></div></footer>
+  <!-- Booking Modal -->
+  <div id="booking-overlay" class="booking-overlay">
+    <div class="booking-modal">
+      <button class="booking-close" onclick="closeBookingModal()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.5rem;margin-bottom:.4rem;">Book This Service</h2>
+      <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:2rem;">Fill out the form below and we'll get back to you within 24 hours.</p>
+      <form id="booking-form" novalidate>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label" for="b-name">Full Name *</label><input type="text" id="b-name" class="form-control" placeholder="John Doe" required></div>
+          <div class="form-group"><label class="form-label" for="b-email">Email *</label><input type="email" id="b-email" class="form-control" placeholder="john@example.com" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label" for="b-phone">Phone</label><input type="tel" id="b-phone" class="form-control" placeholder="+231 XXX XXX XXX"></div>
+          <div class="form-group"><label class="form-label" for="b-service">Service *</label><select id="b-service" class="form-control"><option value="">Select a service…</option><option>Event Virtualization</option><option>Podcast Production</option><option>Documentary Filmmaking</option><option>Zoom Planning</option><option>Branding & Creative Direction</option><option>Photography</option><option>Studio Rental</option><option>Other</option></select></div>
+        </div>
+        <div class="form-group"><label class="form-label" for="b-details">Project Details</label><textarea id="b-details" class="form-control" rows="4" placeholder="Brief description of your project&#10;Purpose of content (marketing, social media, corporate, etc.)&#10;Number of participants&#10;Preferred session date"></textarea></div>
+        <div class="form-group"><label class="form-label" for="b-budget">Budget Range</label><select id="b-budget" class="form-control"><option value="">Select budget range…</option><option>$300 – $1,000</option><option>$1,000 – $5,000</option><option>$5,000+</option></select></div>
+        <button type="submit" class="form-submit-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Send Request</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><img src="images/newlogo.jpeg" alt="M4M" class="footer-logo"><div><div class="footer-brandname"><span>MEDIA FOR THE </span><span class="text-brand-600">MIND</span></div><p class="footer-tagline">Creativity, Conversation, and Influence</p></div></div><div class="footer-links-grid"><div class="footer-links-col"><h5>Navigate</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="book.html">Book</a><a href="contact.html">Contact</a></div><div class="footer-links-col"><h5>Services</h5><a href="services.html#event-virtualization">Event Virtualization</a><a href="services.html#podcast">Podcast Production</a><a href="services.html#documentaries">Documentaries</a><a href="services.html#zoom">Zoom Planning</a><a href="services.html#branding">Branding</a><a href="services.html#photography">Photography</a></div><div class="footer-links-col"><h5>Connect</h5><a href="https://facebook.com/m4tmind" target="_blank">Facebook</a><a href="https://instagram.com/m4tmind" target="_blank">Instagram</a><a href="mailto:info@m4tmind.com">Email Us</a></div></div></div><div class="footer-bottom"><p>&copy; <span id="year"></span> Media For The Mind. All rights reserved.</p><div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><span>·</span><a href="terms.html">Terms of Service</a></div></div></div></footer>
 
   <button id="chat-fab" class="chat-fab"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span class="chat-fab-badge"></span><span class="chat-fab-pulse"></span></button>
-  <div id="chat-modal" class="chat-modal"><div class="chat-modal-inner"><div class="chat-modal-header"><div class="chat-header-left"><div class="chat-avatar"><img src="images/m4m-logo-1.jpg" alt="M4T AI"><span class="chat-online-dot"></span></div><div><h4>M4T Assistant</h4><span class="chat-status">Online · Ready to help</span></div></div><button id="chat-close" class="chat-close-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div><div class="chat-messages" id="chat-messages"><div class="chat-msg chat-msg-bot"><div class="chat-bubble">👋 Hi! Ask me anything about our services or get a free quote!</div><span class="chat-time">Just now</span></div><div class="chat-suggestions"><button class="chat-suggestion-btn" data-msg="What are your pricing options?">💰 Pricing</button><button class="chat-suggestion-btn" data-msg="How do I get started with M4T MIND?">🚀 Get Started</button></div></div><div class="chat-input-row"><input type="text" id="chat-input" placeholder="Type your message..." class="chat-input" autocomplete="off"><button id="chat-send" class="chat-send-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></div></div></div>
+  <div id="chat-modal" class="chat-modal"><div class="chat-modal-inner"><div class="chat-modal-header"><div class="chat-header-left"><div class="chat-avatar"><img src="images/newlogo.jpeg" alt="M4M"><span class="chat-online-dot"></span></div><div><h4>M4M Assistant</h4><span class="chat-status">Online · Ready to help</span></div></div><button id="chat-close" class="chat-close-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div><div class="chat-messages" id="chat-messages"><div class="chat-msg chat-msg-bot"><div class="chat-bubble">👋 Hi! Ask me anything about our services or get a free quote!</div><span class="chat-time">Just now</span></div><div class="chat-suggestions"><button class="chat-suggestion-btn" data-msg="What are your pricing options?">💰 Pricing</button><button class="chat-suggestion-btn" data-msg="How do I get started with M4M?">🚀 Get Started</button></div></div><div class="chat-input-row"><input type="text" id="chat-input" placeholder="Type your message..." class="chat-input" autocomplete="off"><button id="chat-send" class="chat-send-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></div></div></div>
   <button id="back-to-top" class="back-to-top-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
-  <script src="js/main.js"></script>
+  <script>
+function openBookingModal(){document.getElementById('booking-overlay').classList.add('open');}
+function closeBookingModal(){document.getElementById('booking-overlay').classList.remove('open');}
+document.getElementById('booking-overlay')?.addEventListener('click',function(e){if(e.target===this)closeBookingModal();});
+</script>
+  <script type="module" src="/js/main.js"></script>
 </body>
 </html>

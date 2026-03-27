@@ -3,40 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio — M4T MIND | Our Work</title>
-  <meta name="description" content="Explore M4T MIND's portfolio of documentary films, podcast productions, virtual events, and branding projects across Liberia and Africa.">
+  <title>Portfolio — M4M</title>
+  <meta name="description" content="Explore M4M's portfolio of commentary, podcasts, event productions, branding projects, and social media content.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://m4tmind.com/portfolio.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="M4M — Media For The Mind">
+  <meta property="og:title" content="Portfolio — M4M | Our Work">
+  <meta property="og:description" content="View our portfolio of documentaries, events, podcasts, and branding projects.">
+  <meta property="og:url" content="https://m4tmind.com/portfolio.html">
+  <meta property="og:image" content="https://m4tmind.com/images/newlogo.jpeg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Portfolio — M4M | Our Work">
+  <meta name="twitter:description" content="View our portfolio of documentaries, events, podcasts, and branding projects.">
+  <meta name="twitter:image" content="https://m4tmind.com/images/newlogo.jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','sans-serif'],display:['Outfit','sans-serif']},colors:{brand:{500:'#ef4444',600:'#dc2626',700:'#b91c1c'}}}}}</script>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
   <script>(function(){const t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
-  <style>
-    .portfolio-filter-bar{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.5rem;}
-    .filter-btn{padding:.45rem 1.1rem;border-radius:999px;border:1px solid var(--border-color);background:var(--card-bg);font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--text-secondary);cursor:pointer;transition:all .2s;}
-    .filter-btn:hover,.filter-btn.active{background:var(--brand);border-color:var(--brand);color:#fff;}
-    .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;}
-    .portfolio-card{border-radius:16px;overflow:hidden;background:var(--card-bg);border:1px solid var(--border-color);transition:all .35s cubic-bezier(0.23,1,0.32,1);cursor:pointer;position:relative;}
-    .portfolio-card:hover{transform:translateY(-6px);border-color:rgba(220,38,38,0.3);box-shadow:0 20px 60px rgba(0,0,0,0.3);}
-    .portfolio-thumb{height:200px;background:linear-gradient(135deg,var(--bg-secondary),var(--bg-tertiary));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}
-    .portfolio-thumb svg{opacity:.2;}
-    .portfolio-thumb-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7),transparent);opacity:0;transition:opacity .3s;}
-    .portfolio-card:hover .portfolio-thumb-overlay{opacity:1;}
-    .portfolio-play-btn{position:absolute;width:50px;height:50px;border-radius:50%;background:rgba(220,38,38,0.9);display:flex;align-items:center;justify-content:center;color:#fff;opacity:0;transform:scale(.8);transition:all .3s;}
-    .portfolio-card:hover .portfolio-play-btn{opacity:1;transform:scale(1);}
-    .portfolio-tag{position:absolute;top:1rem;left:1rem;padding:.3rem .75rem;border-radius:999px;background:rgba(220,38,38,0.85);color:#fff;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;}
-    .portfolio-body{padding:1.25rem;}
-    .portfolio-client{font-size:.68rem;text-transform:uppercase;letter-spacing:.15em;color:var(--brand);font-weight:700;margin-bottom:.3rem;}
-    .portfolio-title{font-family:'Outfit',sans-serif;font-weight:700;font-size:1rem;margin-bottom:.4rem;}
-    .portfolio-desc{font-size:.8rem;color:var(--text-muted);line-height:1.55;}
-    .portfolio-meta{display:flex;gap:1rem;margin-top:.75rem;padding-top:.75rem;border-top:1px solid var(--border-color);}
-    .portfolio-meta-item{display:flex;align-items:center;gap:.3rem;font-size:.72rem;color:var(--text-muted);}
-    .portfolio-cta-strip{background:linear-gradient(135deg,rgba(220,38,38,0.1),rgba(185,28,28,0.05));border:1px solid rgba(220,38,38,0.15);border-radius:20px;padding:3rem 2rem;text-align:center;margin-top:3rem;}
-  </style>
 </head>
 <body class="font-sans antialiased">
-  <div id="loading-screen" class="loading-screen"><div class="loading-content"><div class="loading-logo"><img src="images/m4m-logo-1.jpg" alt="M4T MIND" class="loading-logo-img"><div class="loading-logo-ring"></div><div class="loading-logo-ring ring-2"></div></div><div class="loading-wordmark"><span class="loading-m4t">M4T</span><span class="loading-mind">MIND</span></div><div class="loading-bar-wrap"><div class="loading-bar" id="loading-bar"></div></div></div></div>
+  <div id="loading-screen" class="loading-screen"><div class="loading-content"><div class="loading-logo"><img src="images/newlogo.jpeg" alt="M4M" class="loading-logo-img"><div class="loading-logo-ring"></div><div class="loading-logo-ring ring-2"></div></div><div class="loading-wordmark"><span class="loading-m4t">MEDIA FOR THE</span><span class="loading-mind">MIND</span></div><div class="loading-tagline">Creativity, Conversation, and Influence</div><div class="loading-bar-wrap"><div class="loading-bar" id="loading-bar"></div></div></div></div>
   <div id="scroll-progress" class="scroll-progress-bar"></div>
   <div id="cookie-popup" class="cookie-popup"><div class="cookie-inner"><div class="cookie-header"><div class="cookie-icon-wrap"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h.01M12 16h.01M16 12h.01"/></svg></div><div><h4 class="cookie-title">We Value Your Privacy</h4><p class="cookie-text">We use cookies to enhance your experience.</p></div></div><div class="cookie-actions"><button id="accept-cookies" class="cookie-btn-accept">Accept All</button><button id="manage-cookies" class="cookie-btn-manage">Manage</button><button id="decline-cookies" class="cookie-btn-decline">Decline</button></div></div></div>
 
@@ -44,16 +32,16 @@
 
   <nav id="navbar" class="navbar">
     <div class="navbar-inner">
-      <a href="index.html" class="nav-logo-link"><div class="nav-logo-img-wrap"><img src="images/m4m-logo-1.jpg" alt="M4T MIND Logo" class="nav-logo-img"></div><div class="nav-logo-text"><span class="nav-logo-m4t">M4T</span><span class="nav-logo-mind">MIND</span><span class="nav-logo-tag">Media 4 The Mind</span></div></a>
+      <a href="index.html" class="nav-logo-link"><div class="nav-logo-img-wrap"><img src="images/newlogo.jpeg" alt="M4M Logo" class="nav-logo-img"></div><div class="nav-logo-text"><span class="nav-logo-m4t">MEDIA FOR THE</span><span class="nav-logo-mind">MIND</span></div></a>
       <div class="nav-desktop">
-        <a href="index.html" class="nav-link">Home</a><a href="services.html" class="nav-link">Services</a><a href="about.html" class="nav-link">About</a><a href="portfolio.html" class="nav-link active-link">Portfolio</a><a href="contact.html" class="nav-link">Contact</a>
+        <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="services.html" class="nav-link">Services</a><a href="portfolio.html" class="nav-link active-link">Portfolio</a><a href="book.html" class="nav-link">Book</a><a href="contact.html" class="nav-link">Contact</a>
         <button id="theme-toggle" class="theme-toggle-btn"><svg id="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg><svg id="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
         <a href="contact.html" class="nav-cta-btn">Get In Touch</a>
       </div>
       <button id="hamburger" class="hamburger-btn"><span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span></button>
     </div>
   </nav>
-  <div id="mobile-menu" class="mobile-menu-overlay"><button id="mobile-close" class="mobile-close-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="mobile-menu-content"><a href="index.html" class="mobile-nav-link">Home</a><a href="about.html" class="mobile-nav-link">About</a><a href="services.html" class="mobile-nav-link">Services</a><a href="portfolio.html" class="mobile-nav-link">Portfolio</a><a href="contact.html" class="mobile-nav-link">Contact</a><a href="contact.html" class="mobile-nav-cta">Get In Touch</a></div><div class="mobile-menu-footer"><span>info@m4tmind.com</span></div></div>
+  <div id="mobile-menu" class="mobile-menu-overlay"><button id="mobile-close" class="mobile-close-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button><div class="mobile-menu-content"><a href="index.html" class="mobile-nav-link">Home</a><a href="about.html" class="mobile-nav-link">About</a><a href="services.html" class="mobile-nav-link">Services</a><a href="portfolio.html" class="mobile-nav-link">Portfolio</a><a href="book.html" class="mobile-nav-link">Book</a><a href="contact.html" class="mobile-nav-link">Contact</a><a href="book.html" class="mobile-nav-cta">Book a Session</a></div><div class="mobile-menu-footer"><span>info@m4tmind.com</span></div></div>
 
   <!-- Page Hero -->
   <div class="page-hero noise-overlay">
@@ -63,7 +51,7 @@
       <div class="page-hero-breadcrumb"><a href="index.html">Home</a><span>›</span><span style="color:var(--brand)">Portfolio</span></div>
       <div class="hero-badge" style="margin:0 auto 1.5rem;"><span class="hero-badge-dot"></span>Our Work</div>
       <h1 class="page-hero-title">Featured <span class="text-gradient">Projects</span></h1>
-      <p class="page-hero-subtitle">A showcase of our most impactful productions — stories told with excellence across Liberia and beyond.</p>
+      <p class="page-hero-subtitle">A showcase of our most impactful productions — stories told with excellence.</p>
     </div>
   </div>
 
@@ -73,128 +61,119 @@
       <!-- Filter Bar -->
       <div class="portfolio-filter-bar reveal">
         <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="documentary">Documentaries</button>
-        <button class="filter-btn" data-filter="event">Event Virtualization</button>
-        <button class="filter-btn" data-filter="podcast">Podcasts</button>
+        <button class="filter-btn" data-filter="commentary">Commentary</button>
+        <button class="filter-btn" data-filter="event">Event</button>
+        <button class="filter-btn" data-filter="podcast">Podcast</button>
         <button class="filter-btn" data-filter="branding">Branding</button>
+        <button class="filter-btn" data-filter="social">Social Media</button>
       </div>
 
       <div class="portfolio-grid" id="portfolio-grid">
 
-        <!-- Card 1 -->
-        <div class="portfolio-card reveal" data-category="documentary">
+        <!-- Card 1 - Commentary -->
+        <a href="https://www.youtube.com/watch?v=Cfco95yBYJQ&list=PLH6SkO_k5H7_RmvOUTFbM6fhGXhyahK6v" target="_blank" class="portfolio-card reveal" data-category="commentary">
           <div class="portfolio-thumb">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(220,38,38,0.5)" stroke-width="1"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            <img src="https://img.youtube.com/vi/Cfco95yBYJQ/hqdefault.jpg" alt="Commentary Series">
             <div class="portfolio-thumb-overlay"></div>
             <div class="portfolio-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-            <span class="portfolio-tag">Documentary</span>
+            <span class="portfolio-tag">Commentary</span>
           </div>
           <div class="portfolio-body">
-            <div class="portfolio-client">M4T MIND Original</div>
-            <h3 class="portfolio-title">Voices of Liberia</h3>
-            <p class="portfolio-desc">A 45-minute cinematic documentary exploring the resilience and cultural identity of Liberian communities through personal narratives.</p>
-            <div class="portfolio-meta">
-              <div class="portfolio-meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>45 min</div>
-              <div class="portfolio-meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>4K Cinema</div>
-              <div class="portfolio-meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/></svg>Monrovia</div>
-            </div>
+            <div class="portfolio-client">M4M Original</div>
+            <h3 class="portfolio-title">Commentary Series</h3>
+            <p class="portfolio-desc">In-depth commentary and analysis on current events and cultural topics.</p>
           </div>
-        </div>
+        </a>
 
-        <!-- Card 2 -->
-        <div class="portfolio-card reveal" style="--delay:.1s" data-category="event">
+        <!-- Card 2 - Event -->
+        <a href="https://www.youtube.com/watch?v=VVR3Is4Dz_c&list=PLH6SkO_k5H7-yhmID3l4v81G1WIk7XsPw" target="_blank" class="portfolio-card reveal" style="--delay:.1s" data-category="event">
           <div class="portfolio-thumb">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(220,38,38,0.5)" stroke-width="1"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <img src="https://img.youtube.com/vi/VVR3Is4Dz_c/hqdefault.jpg" alt="Ordination & Consecration of Liberian Bishop">
             <div class="portfolio-thumb-overlay"></div>
             <div class="portfolio-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
             <span class="portfolio-tag">Event</span>
           </div>
           <div class="portfolio-body">
-            <div class="portfolio-client">International NGO</div>
-            <h3 class="portfolio-title">West Africa Climate Summit 2024</h3>
-            <p class="portfolio-desc">Full multi-camera live streaming and virtual event management for a 2-day international climate policy summit with 1,200+ global attendees.</p>
-            <div class="portfolio-meta">
-              <div class="portfolio-meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>2 Days</div>
-              <div class="portfolio-meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>1,200+ Viewers</div>
-            </div>
+            <div class="portfolio-client">Religious Organization</div>
+            <h3 class="portfolio-title">Ordination &amp; Consecration of Liberian Bishop</h3>
+            <p class="portfolio-desc">Full coverage of the ordination and consecration ceremony.</p>
           </div>
-        </div>
+        </a>
 
-        <!-- Card 3 -->
-        <div class="portfolio-card reveal" style="--delay:.2s" data-category="podcast">
+        <!-- Card 3 - Podcast -->
+        <a href="https://www.youtube.com/watch?v=yJm8tJx2yzc" target="_blank" class="portfolio-card reveal" style="--delay:.2s" data-category="podcast">
           <div class="portfolio-thumb">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(220,38,38,0.5)" stroke-width="1"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+            <img src="https://img.youtube.com/vi/yJm8tJx2yzc/hqdefault.jpg" alt="Eavesdrop In The Moment">
             <div class="portfolio-thumb-overlay"></div>
             <div class="portfolio-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
             <span class="portfolio-tag">Podcast</span>
           </div>
           <div class="portfolio-body">
-            <div class="portfolio-client">Media Organization</div>
-            <h3 class="portfolio-title">The Liberia Lens Podcast</h3>
-            <p class="portfolio-desc">Weekly podcast on journalism, media, and society in West Africa. Full production, editing, and distribution to major streaming platforms.</p>
-            <div class="portfolio-meta">
-              <div class="portfolio-meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Weekly Series</div>
-              <div class="portfolio-meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>All Platforms</div>
-            </div>
+            <div class="portfolio-client">M4M Production</div>
+            <h3 class="portfolio-title">Eavesdrop In The Moment</h3>
+            <p class="portfolio-desc">Candid conversations that matter — unscripted, authentic, impactful.</p>
           </div>
-        </div>
+        </a>
 
-        <!-- Card 4 -->
-        <div class="portfolio-card reveal" style="--delay:.1s" data-category="branding">
+        <!-- Card 4 - Event -->
+        <a href="https://www.youtube.com/watch?v=ZgPHRbHECMc&list=PLH6SkO_k5H7_xnAMwWoBzMDty3EdmWu5Y" target="_blank" class="portfolio-card reveal" style="--delay:.1s" data-category="event">
           <div class="portfolio-thumb">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(220,38,38,0.5)" stroke-width="1"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-            <div class="portfolio-thumb-overlay"></div>
-            <div class="portfolio-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-            <span class="portfolio-tag">Branding</span>
-          </div>
-          <div class="portfolio-body">
-            <div class="portfolio-client">Tech Startup</div>
-            <h3 class="portfolio-title">Nimba Digital Brand Identity</h3>
-            <p class="portfolio-desc">Complete brand identity system including logo, motion graphics, color palette, typography, and social media content strategy guide.</p>
-            <div class="portfolio-meta">
-              <div class="portfolio-meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>3 Weeks</div>
-              <div class="portfolio-meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>Full Identity</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="portfolio-card reveal" style="--delay:.2s" data-category="event">
-          <div class="portfolio-thumb">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(220,38,38,0.5)" stroke-width="1"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <img src="https://img.youtube.com/vi/ZgPHRbHECMc/hqdefault.jpg" alt="Official Launch of the USAID/Liberia Media Activity">
             <div class="portfolio-thumb-overlay"></div>
             <div class="portfolio-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
             <span class="portfolio-tag">Event</span>
           </div>
           <div class="portfolio-body">
-            <div class="portfolio-client">Government of Liberia</div>
-            <h3 class="portfolio-title">National Health Conference</h3>
-            <p class="portfolio-desc">Managed full virtual event infrastructure for the annual national health professionals conference, with simultaneous interpretation and hybrid attendance.</p>
-            <div class="portfolio-meta">
-              <div class="portfolio-meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>3 Days</div>
-              <div class="portfolio-meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/></svg>500+ Attendees</div>
-            </div>
+            <div class="portfolio-client">USAID/Liberia</div>
+            <h3 class="portfolio-title">Official Launch of the USAID/Liberia Media Activity</h3>
+            <p class="portfolio-desc">Full event virtualization and production for the official USAID media activity launch.</p>
           </div>
-        </div>
+        </a>
 
-        <!-- Card 6 -->
-        <div class="portfolio-card reveal" style="--delay:.3s" data-category="documentary">
+        <!-- Card 5 - Branding -->
+        <a href="https://www.youtube.com/watch?v=utU0OEyVl1s&list=PLH6SkO_k5H7-xuMtznU1dBHzh_r9S-Fku&index=12" target="_blank" class="portfolio-card reveal" style="--delay:.2s" data-category="branding">
           <div class="portfolio-thumb">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(220,38,38,0.5)" stroke-width="1"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            <img src="https://img.youtube.com/vi/utU0OEyVl1s/hqdefault.jpg" alt="Elections 2023 Campaign">
             <div class="portfolio-thumb-overlay"></div>
             <div class="portfolio-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-            <span class="portfolio-tag">Documentary</span>
+            <span class="portfolio-tag">Branding</span>
           </div>
           <div class="portfolio-body">
-            <div class="portfolio-client">NGO Client</div>
-            <h3 class="portfolio-title">Seeds of Change</h3>
-            <p class="portfolio-desc">A short-form documentary highlighting agricultural innovation and food security initiatives across rural Liberia — produced for international donor audiences.</p>
-            <div class="portfolio-meta">
-              <div class="portfolio-meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>22 min</div>
-              <div class="portfolio-meta-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>4K + Drone</div>
-            </div>
+            <div class="portfolio-client">Political Campaign</div>
+            <h3 class="portfolio-title">Elections 2023 Campaign</h3>
+            <p class="portfolio-desc">Full branding and media strategy for the 2023 election campaign.</p>
           </div>
-        </div>
+        </a>
+
+        <!-- Card 6 - Branding -->
+        <a href="https://www.youtube.com/watch?v=bgxTQb2VKV8&list=PLH6SkO_k5H7-xuMtznU1dBHzh_r9S-Fku&index=8" target="_blank" class="portfolio-card reveal" style="--delay:.3s" data-category="branding">
+          <div class="portfolio-thumb">
+            <img src="https://img.youtube.com/vi/bgxTQb2VKV8/hqdefault.jpg" alt="Brand Campaign">
+            <div class="portfolio-thumb-overlay"></div>
+            <div class="portfolio-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            <span class="portfolio-tag">Branding/Marketing</span>
+          </div>
+          <div class="portfolio-body">
+            <div class="portfolio-client">Corporate Client</div>
+            <h3 class="portfolio-title">Brand Campaign</h3>
+            <p class="portfolio-desc">Strategic brand marketing and promotional video content.</p>
+          </div>
+        </a>
+
+        <!-- Card 7 - Social -->
+        <a href="https://www.youtube.com/watch?v=-AdiWNb8EXw&list=PLH6SkO_k5H7-xuMtznU1dBHzh_r9S-Fku&index=4" target="_blank" class="portfolio-card reveal" style="--delay:.4s" data-category="social">
+          <div class="portfolio-thumb">
+            <img src="https://img.youtube.com/vi/-AdiWNb8EXw/hqdefault.jpg" alt="Social Media Content">
+            <div class="portfolio-thumb-overlay"></div>
+            <div class="portfolio-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+            <span class="portfolio-tag">Social Media</span>
+          </div>
+          <div class="portfolio-body">
+            <div class="portfolio-client">M4M Content</div>
+            <h3 class="portfolio-title">Social Media Content</h3>
+            <p class="portfolio-desc">Engaging social media video content crafted for maximum reach and impact.</p>
+          </div>
+        </a>
 
       </div>
 
@@ -204,33 +183,34 @@
         <h3 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.75rem;margin-bottom:.75rem;">Want to be in our next <span class="text-gradient">showcase?</span></h3>
         <p style="font-size:.9rem;color:var(--text-muted);max-width:500px;margin:0 auto 1.5rem;line-height:1.65;">Every project is an opportunity to tell a powerful story. Let's add yours to the collection.</p>
         <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
-          <a href="contact.html" class="hero-btn-primary">Start Your Project</a>
+          <a href="book.html" class="hero-btn-primary">Book a Session</a>
           <a href="services.html" class="hero-btn-secondary">View All Services</a>
         </div>
       </div>
     </div>
   </section>
 
-  <footer class="site-footer"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><img src="images/m4m-logo-1.jpg" alt="M4T MIND" class="footer-logo"><div><div class="footer-brandname"><span>M4T</span><span class="text-brand-600">MIND</span></div><p class="footer-tagline">Media 4 The Mind<br>Telling Your Untold Stories</p></div></div><div class="footer-links-grid"><div class="footer-links-col"><h5>Navigate</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a></div><div class="footer-links-col"><h5>Services</h5><a href="services.html#event-virtualization">Event Virtualization</a><a href="services.html#podcast">Podcast Production</a><a href="services.html#documentaries">Documentaries</a><a href="services.html#zoom">Zoom Planning</a></div><div class="footer-links-col"><h5>Connect</h5><a href="https://facebook.com/m4tmind" target="_blank">Facebook</a><a href="https://instagram.com/m4tmind" target="_blank">Instagram</a><a href="mailto:info@m4tmind.com">Email Us</a></div></div></div><div class="footer-bottom"><p>&copy; <span id="year"></span> Media 4 The Mind. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><span>·</span><a href="#">Terms</a></div></div></div></footer>
+  <footer class="site-footer"><div class="footer-inner"><div class="footer-top"><div class="footer-brand"><img src="images/newlogo.jpeg" alt="M4M" class="footer-logo"><div><div class="footer-brandname"><span>MEDIA FOR THE</span><span class="text-brand-600">MIND</span></div><p class="footer-tagline">Creativity, Conversation, and Influence</p></div></div><div class="footer-links-grid"><div class="footer-links-col"><h5>Navigate</h5><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="portfolio.html">Portfolio</a><a href="book.html">Book</a><a href="contact.html">Contact</a></div><div class="footer-links-col"><h5>Services</h5><a href="services.html#event-virtualization">Event Virtualization</a><a href="services.html#podcast">Podcast Production</a><a href="services.html#documentaries">Documentaries</a><a href="services.html#zoom">Zoom Planning</a><a href="services.html#branding">Branding &amp; Creative Direction</a><a href="services.html#photography">Photography</a></div><div class="footer-links-col"><h5>Connect</h5><a href="https://facebook.com/m4tmind" target="_blank">Facebook</a><a href="https://instagram.com/m4tmind" target="_blank">Instagram</a><a href="mailto:info@m4tmind.com">Email Us</a></div></div></div><div class="footer-bottom"><p>&copy; <span id="year"></span> Media For The Mind. All rights reserved.</p><div class="footer-bottom-links"><a href="privacy.html">Privacy Policy</a><span>·</span><a href="terms.html">Terms of Service</a></div></div></div></footer>
 
   <button id="chat-fab" class="chat-fab"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span class="chat-fab-badge"></span><span class="chat-fab-pulse"></span></button>
-  <div id="chat-modal" class="chat-modal"><div class="chat-modal-inner"><div class="chat-modal-header"><div class="chat-header-left"><div class="chat-avatar"><img src="images/m4m-logo-1.jpg" alt="M4T AI"><span class="chat-online-dot"></span></div><div><h4>M4T Assistant</h4><span class="chat-status">Online</span></div></div><button id="chat-close" class="chat-close-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div><div class="chat-messages" id="chat-messages"><div class="chat-msg chat-msg-bot"><div class="chat-bubble">👋 Like what you see? Let's make your project next!</div><span class="chat-time">Just now</span></div><div class="chat-suggestions"><button class="chat-suggestion-btn" data-msg="How do I get started with M4T MIND?">🚀 Get Started</button><button class="chat-suggestion-btn" data-msg="What are your pricing options?">💰 Pricing</button></div></div><div class="chat-input-row"><input type="text" id="chat-input" placeholder="Type your message..." class="chat-input" autocomplete="off"><button id="chat-send" class="chat-send-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></div></div></div>
+  <div id="chat-modal" class="chat-modal"><div class="chat-modal-inner"><div class="chat-modal-header"><div class="chat-header-left"><div class="chat-avatar"><img src="images/newlogo.jpeg" alt="M4M"><span class="chat-online-dot"></span></div><div><h4>M4M Assistant</h4><span class="chat-status">Online</span></div></div><button id="chat-close" class="chat-close-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div><div class="chat-messages" id="chat-messages"><div class="chat-msg chat-msg-bot"><div class="chat-bubble">👋 Like what you see? Let's make your project next!</div><span class="chat-time">Just now</span></div><div class="chat-suggestions"><button class="chat-suggestion-btn" data-msg="How do I get started with M4M?">🚀 Get Started</button><button class="chat-suggestion-btn" data-msg="What are your pricing options?">💰 Pricing</button></div></div><div class="chat-input-row"><input type="text" id="chat-input" placeholder="Type your message..." class="chat-input" autocomplete="off"><button id="chat-send" class="chat-send-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button></div></div></div>
   <button id="back-to-top" class="back-to-top-btn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
 
-  <script src="js/main.js"></script>
+  <script type="module" src="/js/main.js"></script>
   <script>
-    // Portfolio filter
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.portfolio-card');
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        cards.forEach(card => {
-          const match = filter === 'all' || card.dataset.category === filter;
-          card.style.display = match ? '' : 'none';
-          card.style.animation = match ? 'fadeInUp .4s ease both' : '';
+    document.addEventListener('DOMContentLoaded', () => {
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.portfolio-card');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.dataset.filter;
+          cards.forEach(card => {
+            const match = filter === 'all' || card.dataset.category === filter;
+            card.style.display = match ? '' : 'none';
+            card.style.animation = match ? 'fadeInUp .4s ease both' : '';
+          });
         });
       });
     });

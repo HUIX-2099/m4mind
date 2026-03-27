@@ -1,6 +1,4 @@
-/* ============================================
-   M4TMind — Main JavaScript v3.0
-   ============================================ */
+import { createIcons, icons } from 'lucide';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -237,28 +235,55 @@ document.addEventListener('DOMContentLoaded', () => {
   const chatSend = document.getElementById('chat-send');
   const chatMessages = document.getElementById('chat-messages');
 
-  // Canned responses
   const responses = {
-    'documentary': "📽️ Our documentary service covers full pre-production, filming, and post-production. We've produced award-winning docs across West Africa. Contact us at info@m4tmind.com to start!",
-    'podcast': "🎙️ We offer end-to-end podcast production: recording, mixing, mastering, and distribution. We have a professional studio setup in Monrovia, Liberia.",
-    'event': "🎥 Our Event Virtualization team handles everything — live streaming, multi-camera setups, virtual event platforms, and global broadcast. Great for conferences and summits!",
-    'zoom': "💻 We manage all aspects of virtual meetings and Zoom events — setup, moderation, technical support, and full recording with post-production.",
-    'price': "💰 Pricing varies by project scope. Please reach out at info@m4tmind.com or call (+231) 881 274 124 for a custom quote tailored to your needs.",
-    'started': "🚀 Getting started is easy! You can fill out the contact form on our Contact page, or email us at info@m4tmind.com. We'll get back to you within 24 hours.",
-    'location': "📍 We're based in the DB Building, Newport Street, Monrovia, Liberia — but we serve clients across Africa and globally!",
-    'default': "Thanks for reaching out! 😊 For the fastest response, please email us at info@m4tmind.com or call (+231) 881 274 124. We'd love to help tell your story!"
+    greetings: [
+      "Hey there! Welcome to M4M Studios. How can I help you today?",
+      "Hi! Thanks for reaching out to Media For the Mind. What can I do for you?",
+      "Hello! I'm the M4M assistant. Whether it's podcasts, events, or branding — I'm here to help!"
+    ],
+    documentary: "Our documentary service covers full pre-production, filming, and post-production. We specialize in cinematic narratives that capture the essence of your story. From concept development to final delivery, our team handles it all. Reach out at info@m4tmind.com to discuss your project!",
+    podcast: "We offer end-to-end podcast production — concept development, professional recording in our Monrovia studio, mixing, mastering, and distribution across all platforms. Whether you're launching a new show or upgrading an existing one, we've got you covered.",
+    event: "Our Event Virtualization team handles multi-camera live streaming, virtual event platforms, global broadcasts, and hybrid event production. Perfect for conferences, summits, ceremonies, and corporate events.",
+    zoom: "We provide complete virtual meeting management — Zoom setup, technical support, moderation, breakout room coordination, recording, and post-production editing. Ideal for organizations running remote meetings and webinars.",
+    branding: "Our Branding & Creative Direction service includes logo design, visual identity systems, brand strategy, website design and development, motion graphics, and media consulting. We help you build a brand that resonates.",
+    photography: "Our photography services cover corporate events, product photography, portraits, and brand visuals. We capture with clarity, detail, and impact — tailored for brands, products, and individuals.",
+    studio: "Our studio is available for rental! Equipped with professional audio/video recording gear, lighting, and a comfortable set. Perfect for podcasts, interviews, content creation, and more. Contact us to check availability.",
+    pricing: "Pricing varies by project scope and service type. We work with budgets ranging from $300 to $5,000+. After an initial consultation, we'll provide a detailed, transparent quote tailored to your needs. Email info@m4tmind.com for a custom quote.",
+    started: "Getting started is easy! You can:\n1. Fill out our intake form on the Book page\n2. Email us at info@m4tmind.com\n3. Call (+231) 881 274 124\n\nWe'll get back to you within 24 hours with a consultation plan.",
+    location: "We're located on Jamaica Road, Monrovia, Liberia. Our studio is equipped for professional media production. We also serve clients across Africa and globally through remote services.",
+    onboarding: "Our onboarding process:\n1. Initial consultation to discuss goals & vision\n2. Customized proposal with timeline & pricing\n3. Deposit payment to secure your booking\n4. Pre-production planning & scheduling\n5. Production day!\n\nWe handle all logistics — you just bring your ideas.",
+    services: "We offer 6 core services:\n\n1. Event Virtualization — Live streaming & virtual events\n2. Podcast Production — End-to-end audio & video podcasts\n3. Documentaries — Cinematic narrative filmmaking\n4. Zoom Planning — Virtual meeting management\n5. Branding & Creative Direction — Brand identity & web design\n6. Photography — Visual content & product shots\n\nPlus Studio Rental! Which service interests you?",
+    hours: "Our studio operates Monday–Friday, 9 AM – 6 PM (GMT). Weekend sessions are available by special arrangement. Contact us to schedule.",
+    payment: "We accept bank transfers, mobile money, and international payments. Typically we require a 50% deposit to start, with the balance due on delivery. Milestone-based plans are available for larger projects.",
+    fallback: [
+      "That's a great question! For the most detailed answer, please reach out to us at info@m4tmind.com or call (+231) 881 274 124. We'd love to help!",
+      "I appreciate your interest! Our team can give you a more detailed response — email info@m4tmind.com or visit our Contact page to get in touch.",
+      "Thanks for asking! For specifics, our team is best reached at info@m4tmind.com. We respond within 24 hours!"
+    ]
   };
 
   function getBotResponse(msg) {
     const lower = msg.toLowerCase();
-    if (lower.includes('documentary') || lower.includes('film') || lower.includes('docu')) return responses.documentary;
-    if (lower.includes('podcast') || lower.includes('audio')) return responses.podcast;
-    if (lower.includes('event') || lower.includes('virtual') || lower.includes('stream')) return responses.event;
-    if (lower.includes('zoom') || lower.includes('meeting')) return responses.zoom;
-    if (lower.includes('price') || lower.includes('cost') || lower.includes('pricing') || lower.includes('how much')) return responses.price;
-    if (lower.includes('start') || lower.includes('begin') || lower.includes('get started')) return responses.started;
-    if (lower.includes('location') || lower.includes('where') || lower.includes('liberia') || lower.includes('monrovia')) return responses.location;
-    return responses.default;
+
+    if (/^(hi|hey|hello|howdy|good (morning|afternoon|evening)|what'?s up|yo)\b/.test(lower)) {
+      return responses.greetings[Math.floor(Math.random() * responses.greetings.length)];
+    }
+    if (lower.includes('services') || lower.includes('what do you') || lower.includes('what can you') || lower.includes('offer')) return responses.services;
+    if (lower.includes('documentary') || lower.includes('film') || lower.includes('docu') || lower.includes('commentary')) return responses.documentary;
+    if (lower.includes('podcast') || lower.includes('audio') || lower.includes('recording') || lower.includes('show')) return responses.podcast;
+    if (lower.includes('event') || lower.includes('virtual') || lower.includes('stream') || lower.includes('live') || lower.includes('conference')) return responses.event;
+    if (lower.includes('zoom') || lower.includes('meeting') || lower.includes('webinar')) return responses.zoom;
+    if (lower.includes('brand') || lower.includes('logo') || lower.includes('design') || lower.includes('website') || lower.includes('creative')) return responses.branding;
+    if (lower.includes('photo') || lower.includes('shoot') || lower.includes('portrait') || lower.includes('product photo')) return responses.photography;
+    if (lower.includes('studio') || lower.includes('rental') || lower.includes('rent') || lower.includes('space') || lower.includes('room')) return responses.studio;
+    if (lower.includes('price') || lower.includes('cost') || lower.includes('pricing') || lower.includes('how much') || lower.includes('rate') || lower.includes('budget') || lower.includes('quote')) return responses.pricing;
+    if (lower.includes('start') || lower.includes('begin') || lower.includes('get started') || lower.includes('book') || lower.includes('hire')) return responses.started;
+    if (lower.includes('where') || lower.includes('location') || lower.includes('address') || lower.includes('office') || lower.includes('monrovia') || lower.includes('liberia') || lower.includes('jamaica')) return responses.location;
+    if (lower.includes('onboard') || lower.includes('process') || lower.includes('how does it work') || lower.includes('steps') || lower.includes('workflow')) return responses.onboarding;
+    if (lower.includes('hour') || lower.includes('open') || lower.includes('schedule') || lower.includes('time') || lower.includes('available') || lower.includes('when')) return responses.hours;
+    if (lower.includes('pay') || lower.includes('deposit') || lower.includes('transfer') || lower.includes('money') || lower.includes('payment')) return responses.payment;
+
+    return responses.fallback[Math.floor(Math.random() * responses.fallback.length)];
   }
 
   function appendMessage(text, sender) {
@@ -399,5 +424,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   setNavbarTop();
   window.addEventListener('resize', setNavbarTop);
+
+  createIcons({ icons });
 
 });
