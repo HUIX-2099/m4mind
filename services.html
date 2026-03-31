@@ -32,7 +32,10 @@
 
   <nav id="navbar" class="navbar">
     <div class="navbar-inner">
-      <a href="index.html" class="nav-logo-link"><div class="nav-logo-img-wrap"><img src="images/newlogo.jpeg" alt="M4M Logo" class="nav-logo-img"></div><div class="nav-logo-text"><span class="nav-logo-m4t">MEDIA FOR THE</span><span class="nav-logo-mind">MIND</span><span class="nav-logo-tag">Media For The Mind</span></div></a>
+      <a href="index.html" class="nav-logo-link">
+        <img src="logo/dark_mode.png" alt="M4M Logo" class="nav-logo-main dark-theme-logo">
+        <img src="logo/light_mode.png" alt="M4M Logo" class="nav-logo-main light-theme-logo">
+      </a>
       <div class="nav-desktop">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
@@ -40,10 +43,12 @@
         <a href="portfolio.html" class="nav-link">Portfolio</a>
         <a href="book.html" class="nav-link">Book</a>
         <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-actions">
         <button id="theme-toggle" class="theme-toggle-btn"><svg id="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg><svg id="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
         <a href="contact.html" class="nav-cta-btn">Get In Touch</a>
+        <button id="hamburger" class="hamburger-btn"><span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span></button>
       </div>
-      <button id="hamburger" class="hamburger-btn"><span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span></button>
     </div>
   </nav>
 
@@ -213,18 +218,45 @@
       <button class="booking-close" onclick="closeBookingModal()"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
       <h2 style="font-family:'Outfit',sans-serif;font-weight:800;font-size:1.5rem;margin-bottom:.4rem;">Book This Service</h2>
       <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:2rem;">Fill out the form below and we'll get back to you within 24 hours.</p>
-      <form id="booking-form" novalidate>
+      <form id="booking-form" action="mailto:info@m4tmind.com" method="POST" enctype="text/plain" novalidate>
         <div class="form-row">
-          <div class="form-group"><label class="form-label" for="b-name">Full Name *</label><input type="text" id="b-name" class="form-control" placeholder="John Doe" required></div>
-          <div class="form-group"><label class="form-label" for="b-email">Email *</label><input type="email" id="b-email" class="form-control" placeholder="john@example.com" required></div>
+          <div class="form-group"><label class="form-label" for="name">Full Name *</label><input type="text" id="name" class="form-control" placeholder="John Doe" required></div>
+          <div class="form-group"><label class="form-label" for="email">Email Address *</label><input type="email" id="email" class="form-control" placeholder="john@example.com" required></div>
         </div>
         <div class="form-row">
-          <div class="form-group"><label class="form-label" for="b-phone">Phone</label><input type="tel" id="b-phone" class="form-control" placeholder="+231 XXX XXX XXX"></div>
-          <div class="form-group"><label class="form-label" for="b-service">Service *</label><select id="b-service" class="form-control"><option value="">Select a service…</option><option>Event Virtualization</option><option>Podcast Production</option><option>Documentary Filmmaking</option><option>Zoom Planning</option><option>Branding & Creative Direction</option><option>Photography</option><option>Studio Rental</option><option>Other</option></select></div>
+          <div class="form-group"><label class="form-label" for="phone">Phone Number</label><input type="tel" id="phone" class="form-control" placeholder="+231 XXX XXX XXX"></div>
+          <div class="form-group"><label class="form-label" for="organization">Organization</label><input type="text" id="organization" class="form-control" placeholder="Your company or organization"></div>
         </div>
-        <div class="form-group"><label class="form-label" for="b-details">Project Details</label><textarea id="b-details" class="form-control" rows="4" placeholder="Brief description of your project&#10;Purpose of content (marketing, social media, corporate, etc.)&#10;Number of participants&#10;Preferred session date"></textarea></div>
-        <div class="form-group"><label class="form-label" for="b-budget">Budget Range</label><select id="b-budget" class="form-control"><option value="">Select budget range…</option><option>$300 – $1,000</option><option>$1,000 – $5,000</option><option>$5,000+</option></select></div>
-        <button type="submit" class="form-submit-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Send Request</button>
+        <div class="form-group"><label class="form-label" for="service">Service Needed *</label><select id="service" class="form-control" style="cursor:pointer;"><option value="">Select a service…</option><option>Event Virtualization</option><option>Podcast Production</option><option>Documentary Filmmaking</option><option>Zoom Planning</option><option>Branding &amp; Creative Direction</option><option>Photography</option><option>Studio Rental</option><option>Other</option></select></div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label" for="session-date">Preferred Session Date</label><input type="date" id="session-date" class="form-control"></div>
+          <div class="form-group"><label class="form-label" for="participants">Number of Participants</label><input type="number" id="participants" class="form-control" min="1" placeholder="e.g. 4"></div>
+        </div>
+        <div class="form-group"><label class="form-label" for="details">Project Details *</label><textarea id="details" class="form-control" rows="5" placeholder="Brief description of your project&#10;Purpose of content (marketing, social media, corporate, etc.)" required></textarea></div>
+        <div class="form-group"><label class="form-label" for="creative">Creative Direction</label><textarea id="creative" class="form-control" rows="4" placeholder="Do you have a concept or theme?&#10;Reference links (optional)&#10;Brand colors / style preferences"></textarea></div>
+        <div class="form-group"><label class="form-label">Technical Needs</label>
+          <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.25rem;">
+            <label style="display:flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--text-secondary);cursor:pointer;"><input type="checkbox" name="tech_video" style="accent-color:var(--brand);"> Video recording</label>
+            <label style="display:flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--text-secondary);cursor:pointer;"><input type="checkbox" name="tech_audio"> Audio only</label>
+            <label style="display:flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--text-secondary);cursor:pointer;"><input type="checkbox" name="tech_editing"> Editing required</label>
+          </div>
+        </div>
+        <div class="form-group"><label class="form-label">Additional Services</label>
+          <div style="display:flex;flex-wrap:wrap;gap:.75rem;margin-top:.25rem;">
+            <label style="display:flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--text-secondary);cursor:pointer;"><input type="checkbox" name="add_editing"> Content editing</label>
+            <label style="display:flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--text-secondary);cursor:pointer;"><input type="checkbox" name="add_social"> Social media clips</label>
+            <label style="display:flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--text-secondary);cursor:pointer;"><input type="checkbox" name="add_branding"> Branding assistance</label>
+          </div>
+        </div>
+        <div class="form-group"><label class="form-label" for="budget">Budget Range</label><select id="budget" class="form-control" style="cursor:pointer;"><option value="">Select budget range…</option><option>$300 – $1,000</option><option>$1,000 – $5,000</option><option>$5,000+</option></select></div>
+        <div class="form-group">
+          <label class="form-label">Agreement</label>
+          <div style="display:flex;flex-direction:column;gap:.5rem;margin-top:.25rem;">
+            <label style="display:flex;align-items:flex-start;gap:.5rem;font-size:.85rem;color:var(--text-secondary);cursor:pointer;"><input type="checkbox" name="agree_terms" required style="margin-top:.2rem;"> I agree to the <a href="terms.html" style="color:var(--brand);">Terms &amp; Conditions</a> and <a href="privacy.html" style="color:var(--brand);">Privacy Policy</a>.</label>
+            <label style="display:flex;align-items:flex-start;gap:.5rem;font-size:.85rem;color:var(--text-secondary);cursor:pointer;"><input type="checkbox" name="agree_booking" required style="margin-top:.2rem;"> I understand a booking is not confirmed until payment is completed.</label>
+          </div>
+        </div>
+        <button type="submit" class="form-submit-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Submit Booking Request</button>
       </form>
     </div>
   </div>
